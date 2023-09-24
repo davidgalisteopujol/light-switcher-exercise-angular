@@ -1,0 +1,16 @@
+<div class="m-4">
+    <h1><ins>Controlador</ins></h1>
+    <div class="d-flex">
+      <div class="form-floating col-2 mr-4">
+        <select class="form-select" id="floatingSelect" aria-label="Floating label select" [(ngModel)]="selectedColor"  (ngModelChange)="valueChange()">
+          <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+        </select>
+        <label for="floatingSelect">Seleccione un color</label>
+      </div>
+      <div class="form-check form-switch mt-3 ml-3">
+        <input class="form-check-input m-2" type="checkbox" role="switch" id="flexSwitchCheckChecked" [checked]="checked" (change)="onSwitchChange()">
+        <label class="form-check-label" for="flexSwitchCheckChecked">{{checked ? "Encendido" :"Apagado"}}</label>
+      </div>
+    </div>
+  </div>
+  
